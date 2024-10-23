@@ -1,0 +1,14 @@
+// Para que la clave sea md5  y cambiar estas lineas en 
+/var/www/html/dierefi/vendor/laravel/framework/src/Illuminate/Auth
+ EloquentUserProviders.php
+en la funcion tiene que quedar asi
+ public function validateCredentials(UserContract $user, array $credentials)
+
+       $plain = $credentials['password'];
+        if (md5($plain)==$user->getAuthPassword()){
+            return true;
+        }
+        else 
+        {
+           return $this->hasher->check($plain, $user->getAuthPassword());
+        }

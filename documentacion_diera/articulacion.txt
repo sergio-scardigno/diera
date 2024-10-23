@@ -1,0 +1,157 @@
+
+
+buscar ofertas a articular
+
+
+mientras hay_ofertas
+{
+	mientras igual_localizacion
+		{
+
+				si es un alta de oferta y no existe en ofertas
+						agrego  nueva oferta
+						modifico_localizacion=true
+				elseif es baja y existe en ofertas
+						quitar oferta
+						modifico_localizacion=true
+				endif
+				buscar otra oferta
+
+		} //igual_localizacion 
+
+	si modifico_localizacion
+	{ 
+		si la localizacion tiene ofertas y el formulario esta Cargado
+			{   
+				estaba_confirmado=(estado del formulario==confirmado)
+				si estaba_confirmado
+					{	
+						desconfirmar formulario						
+					}
+				consistir el fromulario
+				si estado del formulario es completo y estaba_confirmado 
+					{
+						ponerlo en confirmado nuevamente
+					}
+
+			}
+		elseif la localizacion no tiene mas ofertas
+			{
+				if el fomulario no esta cargado
+					{
+						eliminar formulario
+						eliminar datos  de la localización
+					}
+				else   (el formulario tiene datos)
+					{
+						cambiar el formulario a estado de error de padron
+						marcar localizacion_para_borrar_pendiente	
+					} 
+			}
+		si la localizacion es nueva y no_hay_usuario
+			{
+				agregar usuario
+			}
+
+	}  // modifico_localizacion
+
+} // hay_ofertas
+
+
+
+
+nueva version!!!!!
+
+==============================
+==============================
+==============================
+
+buscar ofertas a articular
+
+mientras hay oferta
+	{
+		si es de otro cue y el cue anterior se modifico
+			{
+		  		actualiza cue
+		  		se modifico=false
+		  	}
+
+		si es alta de oferta
+			{
+		 		agrego oferta
+		 	}
+		else
+			{
+		 		bajo oferta
+		 	}
+	}
+
+si el cue anterior se modifico
+	{ actualiza cue }
+
+
+	
+
+-----------
+actualiza cue:
+
+		si la localizacion tiene ofertas y el formulario esta Cargado
+			{   
+				estaba_confirmado=(estado del formulario==confirmado)
+				si estaba_confirmado
+					{	
+						desconfirmar formulario						
+					}
+				consistir el fromulario
+				si estado del formulario es completo y estaba_confirmado 
+					{
+						ponerlo en confirmado nuevamente
+					}
+
+			}
+		elseif la localizacion no tiene mas ofertas
+			{
+				if el fomulario no esta cargado
+					{
+						eliminar formulario
+						eliminar datos  de la localización
+					}
+				else   (el formulario tiene datos)
+					{
+						cambiar el formulario a estado de error de padron
+						marcar localizacion_para_borrar_pendiente	
+					} 
+			}
+
+		si la localizacion es nueva y no_hay_usuario
+			{	agregar usuario }
+
+			
+--------------------
+
+agrego oferta:
+
+	si no existe en ofertas
+		{
+			si no tiene localizacion
+				{	agrego localizacion }			
+			agrego  nueva oferta
+			modifico=true
+		}
+
+----------------------
+baja oferta:
+	if existe en ofertas
+		{
+			quitar oferta
+			modifico=true
+		}					
+					
+------------------------
+
+
+
+OTRAS =
+en eliminar_formulario 
+	agregar delete localizacion si tiene marcar localizacion_para_borrar_pendiente
+

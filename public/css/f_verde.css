@@ -1,0 +1,67 @@
+
+.panel-default > .panel-heading 
+{ 
+  background-image: url(../images/fnd_body_verde.jpg);
+  background-size: contain;
+  background-color: transparent;  
+  border-color: transparent;
+  }
+
+.panel-default {
+    border-color: #AA7065; 
+    border-width: 1px;
+    border-style: solid;
+}  
+
+
+/*.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}*/
+
+.panel-footer {
+     /*background-color:transparent;*/
+    border-top:0px;
+   /*background-color: #c29484;*/
+}
+.panel-body {  
+  height: calc(100vh - 200px);
+  overflow-y: auto; 
+}
+
+h2 {
+    font-family:inherit;
+    font-size:16px;
+    color:#333; 
+    font-weight:bold;
+    text-align: center;
+}
+
+h3 {
+    font-family:inherit;
+    font-size:14px;
+    color:#333; 
+    font-weight:bold;
+    text-align: center;
+}
+
+h5 {
+    font-family:inherit;
+    font-size:12px;
+    color:#333;
+    font-weight:normal;
+}
+
+ /*a, span .check_td {color:#333; }*/
+
+table.cuadro ,
+table.cuadro  tr,
+table.cuadro  tr th
+,
+table.cuadro tbody tr td {
+  background-color:#E6EFDE;  
+  border-color: #9CBC57; 
+  font-weight: normal;
+  padding: 1px;  
+}
+

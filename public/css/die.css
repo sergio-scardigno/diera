@@ -1,0 +1,157 @@
+/* Tablas genericas*/
+table.cuadro, table.cuadro tbody {
+    /* background-color: white; */
+    border-collapse: collapse;
+    border-width: 2px;
+    border-spacing: 0;
+    clear:both;
+    font-size: 11px;   
+    width: auto;
+}
+
+table.cuadro tbody tr th {
+    border-width: 1px;
+    border-style: solid;
+    padding: 3px;
+    /*width: 4em;*/
+}
+table.cuadro tbody tr th.titulo1 {
+    text-align: center; 
+    /* width: 6em; */
+    vertical-align: middle;
+    display: table-cell;    
+    word-wrap: break-word;
+}
+table.cuadro tbody tr th.titulo2 {
+    text-align: left;
+    width: 20em;
+    vertical-align: middle;         
+}
+
+table.cuadro tbody tr td input[type="text"],
+table.cuadro tbody tr td textarea
+table.cuadro tbody tr td select {
+   border-width: 0;
+}
+
+table.cuadro tbody tr td input[type="number"]
+ { 
+   text-align:right;
+   vertical-align: middle;      
+    width: 3.5em; 
+     height: 2.3em;
+ }
+
+table.cuadro tbody tr td textarea {
+    width:40em;
+}
+div.divselect {
+    overflow: hidden;
+}
+
+table.cuadro tbody tr td div select[disabled],
+table.cuadro tbody tr td input[disabled],
+table.cuadro tbody tr td textarea[disabled] {
+    background-color: #A39A9A;
+    border:none;
+    padding: 0px;    
+    font-weight: normal;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+td.habilitada table.cuadro tbody tr { background-color: #ffffff;}
+td.habilitada input[type="number"],
+td.habilitada input[type="text"],
+td.habilitada input[type="combobox"],
+td.habilitada input[type="select"],
+td.habilitada input[type="textarea"],
+td.habilitada input[type="checkbox"]
+ {         
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+td.error input[type="number"],
+td.error input[type="text"],
+td.error input[type="combobox"],
+td.error input[type="select"],
+td.error input[type="textarea"],
+td.error input[type="checkbox"] 
+{   
+    border-color: #f44336/*da4340*/;    
+    background-color: #f44336/*da4340*/; 
+    border-width: 1px;
+    color:#ffffff;
+    font-weight: bold;
+    border-style: solid;
+    padding: 0px;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+/*td.advertencia, table.cuadro tbody tr { background-color: #f7ecb5;}*/
+td.advertencia input[type="number"],
+td.advertencia input[type="text"],
+td.advertencia input[type="combobox"],
+td.advertencia input[type="select"],  
+td.advertencia input[type="textarea"],
+td.advertencia input[type="checkbox"] {     
+    background-color: #f7ecb5; 
+    border-color: #8a6d3b;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+td.deshabilitada input[type="number"], input[type="text"], [type="textarea"], [type="combobox"]
+ { background-color: #A39A9A;  
+   border-color: #A39A9A;   
+   border-width: 1px;
+   border-style: solid;
+   padding: 0px;
+   overflow: auto;
+   vertical-align: middle; 
+  }
+
+td.totales input[type="number"] 
+ { background-color: #d1d0ce;/*#f0e68c;*/
+   border-color: #d1d0ce;/*#f0e68c;   */
+   border-width: 1px;
+   border-style: solid;
+   padding: 0px;
+   overflow: auto;
+   vertical-align: middle; 
+  }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance:textfield; }
+
+
+.navbar {
+   margin-bottom: 0px; }
+
+.row {
+     margin-right: 0px; 
+     margin-left: 0px; 
+     margin-top: 0px; 
+     margin-bottom: 0px;
+}  
+
+
+.navbar-fixed-bottom  {
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+}
+
+
+
+  
